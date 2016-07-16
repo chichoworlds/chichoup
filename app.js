@@ -1,7 +1,7 @@
 //powerful-waters-96210
 var express = require('express');
 var app = express();
-var port = 300;
+var port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
