@@ -5,7 +5,6 @@ var port = process.env.PORT || 3000;
 var http = require('http').Server(app);
 
 
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res){
   res.send("Hi!");
