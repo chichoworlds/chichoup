@@ -8,12 +8,8 @@
     "start": "node app.js"
   },
   "author": "Fede Crespo",
-  "license": "",
   "dependencies": {
     "express": "4.13.3",
     "formidable": "1.0.17"
-  },
-  "engines": {
-  "node": "4.4.7"
   }
 }
