@@ -2,6 +2,8 @@
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 3000;
+var http = require('http').Server(app);
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -10,6 +12,10 @@ app.get('/', function(req, res){
 });
 
 
-var server = app.listen(port, function(){
-  console.log('Server listening on port 3000');
+http.listen(port, function (err) {
+	if (err) {
+		console.log(err);
+	}else{
+		console.log('Server is running on port '+ port);
+	}
 });
