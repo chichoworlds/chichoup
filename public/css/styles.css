@@ -71,3 +71,8 @@ h2 {
 .progress-bar {
   background-color: #a94264;
 }
+
+a, a:hover {
+  color:#4e80bb;
+  /*color:#a94264;*/
+}

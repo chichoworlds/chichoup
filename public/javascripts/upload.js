@@ -20,7 +20,6 @@ $('#upload-input').on('change', function(){
       // add the files to formData object for the data payload
       formData.append('uploads[]', file, file.name);
     }
-
     $.ajax({
       url: '/upload',
       type: 'POST',
@@ -29,6 +28,8 @@ $('#upload-input').on('change', function(){
       contentType: false,
       success: function(data){
           console.log('upload successful!\n' + data);
+          var url = '<a href="http://'+data+'" target="_blank">'+data+'</a>';
+          $("#addURL").append(url+'\n');
       },
       xhr: function() {
         // create an XMLHttpRequest
@@ -48,7 +49,7 @@ $('#upload-input').on('change', function(){
 
             // once the upload reaches 100%, set the progress bar text to done
             if (percentComplete === 100) {
-              $('.progress-bar').html('Listo!');
+              $('.progress-bar').html('Done!');
             }
 
           }

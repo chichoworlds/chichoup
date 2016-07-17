@@ -4,6 +4,9 @@ logs
 *.log
 npm-debug.log*
 
+#Design files
+*.ai
+
 # Runtime data
 pids
 *.pid
