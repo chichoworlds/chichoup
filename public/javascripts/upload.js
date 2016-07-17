@@ -27,7 +27,7 @@ $('#upload-input').on('change', function(){
       processData: false,
       contentType: false,
       success: function(data){
-          console.log('upload successful!\n' + data);
+          //console.log('upload successful!\n' + data);
           var url = '<a href="http://'+data+'" target="_blank">'+data+'</a>';
           $("#addURL").append(url+'\n');
       },
